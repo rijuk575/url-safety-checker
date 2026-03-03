@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>URL Safety Checker</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="popup.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<div class="title">
+<img src="icon48.png" alt="logo" class="logo">
+<div>
+<h1>URL Safety Checker</h1>
+<p class="subtitle">Quick scan before you click</p>
+</div>
+</div>
+
+<button id="scan-tab" class="btn-ghost">Scan current tab</button>
+</header>
+
+<main>
+
+<label for="url-input">Enter URL</label>
+
+<div class="input-row">
+<input id="url-input" placeholder="https://example.com/path" />
+<button id="check-btn" class="btn">Check</button>
+</div>
+
+<div id="result" class="result-card hidden">
+
+<div class="result-header">
+<div id="status-badge" class="badge">Safe</div>
+<div class="score">Score: <span id="score">0</span>/100</div>
+</div>
+
+<div class="progress">
+  <div id="progress-bar"></div>
+</div>
+
+<ul id="reasons" class="reasons"></ul>
+
+<div class="actions">
+<a id="open-link" class="btn btn-open" target="_blank">Open link</a>
+</div>
+
+</div>
+
+<div class="footer-note">
+<small>Heuristic + VirusTotal scanner</small>
+</div>
+
+</main>
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
